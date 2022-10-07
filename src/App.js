@@ -1,35 +1,61 @@
-import { useState, useRef } from "react";
-import { useFrame, Canvas } from "@react-three/fiber";
+import * as THREE from 'three'
+import { Suspense, useMemo, useRef, useState} from 'react'
+import { Canvas, useThree, useFrame, useLoader} from '@react-three/fiber'
+import { OrbitControls, useTexture, CameraShake, Reflector} from '@react-three/drei'
+import { SVGLoader } from 'three/examples/jsm/loaders/SVGLoader'
 
-export default function App () {
-
-  return(
-    <Canvas camera={{position: [0, 0, 5]}}>
-      <ambientLight intensity={5} />
-      <spotLight position={[0, 0, 5]} />
-      <group>
-        <Partmesh position={[-1.2, 0, 0]} />
-        <Partmesh position={[1.2, 0, 0]} />
-      </group>
+export default function App() {
+  return (
+    <Canvas dpr={[1, 1.5]} camera={{positions: [0, 0, 15]}}>
+      <color attach="background" args={['black']}/>
+      <ambientLight />
+      <OrbitControls enableZoom={false} enablePan={false} enableRotate={false}/>
+      <Suspense fallback={null}>
+        <Rig>
+          <Triangle color="#ff2060" scale={0.009} rotation={[0, 0, Math.PI / 3]} />
+          <Triangle color="cyan" scale={0.009} position={[2, 0, -2]} rotation={[0, 0, Math.PI / 3]} />
+          <Triangle color="orange" scale={0.009} position={[-2, 0, -2]} rotation={[0, 0, Math.PI / 3]} />
+          <Triangle color="white" scale={0.009} position={[0, 2, -10]} rotation={[0, 0, Math.PI / 3]} />
+          <Ground mirror={1} blur={[500, 100]} mixBlur={12} mixStrength={1.5} rotation={[-Math.PI / 2, 0, Math.PI / 2]} position-y={-0.8} />
+        </Rig>
+      </Suspense>
+      <CameraShake yawFrequency={0.2} pitchFrequency={0.2} rollFrequency={0.2} />
     </Canvas>
   )
+
 }
-function Partmesh(props){
-  const refer = useRef()
-  const [hovered, hover] = useState(false)
-  const [clicked, click] = useState(false)
-  useFrame((state , delta)=>{refer.current.rotation.x += delta})
-  return(
-    <mesh  
-      ref={refer}
-      {...props} 
-      scale={(clicked)? 1 : 1.5}
-      onPointerOver = {(e)=>hover(true)}
-      onPointerOut = {(e)=>hover(false)}
-      onClick = {(e)=>click(!clicked)}>
-        <boxGeometry args={[1, 1, 1]}/>
-        <meshStandardMaterial 
-        color={ (hovered)? 'white' : 'orange'} />
-    </mesh>
+
+function Triangle({ color, ...props }) {
+  const ref = useRef()
+  useFrame((_) => (ref.current.position.y = -1.75 + Math.sin(_.clock.elapsedTime) / 10))
+  const { paths: [path] } = useLoader(SVGLoader, '/triangle.svg')
+  const geom = useMemo(() => SVGLoader.pointsToStroke(path.subPaths[0].getPoints(), path.userData.style), [])
+  return (
+    <group ref={ref} >
+      <mesh geometry={geom} {...props}>
+        <meshBasicMaterial toneMapped={false} color={color}/>
+      </mesh>
+    </group>
+  )
+}
+
+function Rig({children}) {
+  const ref = useRef()
+  const { camera, mouse } = useThree()
+  const vec = new THREE.Vector3()
+  useFrame(() => {
+    camera.position.lerp(vec.set(mouse.x * 2, 0, 3.5), 0.05)
+    ref.current.position.lerp(vec.set(mouse.x, mouse.y*0.1, 0), 0.1)
+    ref.current.rotation.y = THREE.MathUtils.lerp(ref.current.rotation.y, (-mouse.x * Math.PI) / 20, 0.1)
+  })
+  return <group ref={ref}>{children}</group>
+}
+
+function Ground(props) {
+  const [floor, normal] = useTexture(['/SurfaceImperfections003_1K_var1.jpg', '/SurfaceImperfections003_1K_Normal.jpg'])
+  return (
+    <Reflector resolution={1024} args={[8, 8]} {...props}>
+      {(Material, props) => <Material color="#f0f0f0" metalness={0} roughnessMap={floor} normalMap={normal} normalScale={[2, 2]} {...props} />}
+    </Reflector>
   )
 }
