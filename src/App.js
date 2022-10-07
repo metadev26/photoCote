@@ -4,13 +4,18 @@ import Glbgroup from "./glbgroup"
 import Test from "./test"
 import Viewer from "./robot"
 import Cannon from "./simple physics demo with debug bounds"
+import Shadermaterial from "./Shadermaterials"
+
+
+
+
+
+
 
 export default function App() {
   return (
     <>
-      <Test />
-      <Viewer />
-      <Cannon />
+      <Shadermaterial />
     </>
   )
 }
