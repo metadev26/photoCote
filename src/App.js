@@ -5,7 +5,7 @@ import Test from "./test"
 import Viewer from "./robot"
 import Cannon from "./simple physics demo with debug bounds"
 import Shadermaterial from "./Shadermaterials"
-
+import Watershader from "./Watershader"
 
 
 
@@ -16,6 +16,7 @@ export default function App() {
   return (
     <>
       <Shadermaterial />
+      <Watershader />
     </>
   )
 }
