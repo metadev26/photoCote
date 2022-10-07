@@ -1,0 +1,480 @@
+{
+  "asset": {
+    "generator": "Microsoft GLTF Exporter 2.8.3.41",
+    "version": "2.0"
+  },
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5123,
+      "count": 15414,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 13597,
+      "type": "VEC3",
+      "max": [
+        115.703125,
+        173.54452514648438,
+        122.11312866210938
+      ],
+      "min": [
+        -91.533203125,
+        -61.35662841796875,
+        -95.462890625
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 13597,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 13597,
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 13597,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5121,
+      "count": 13597,
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 13597,
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5123,
+      "count": 4380,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5126,
+      "count": 4380,
+      "type": "VEC3",
+      "max": [
+        142.2001953125,
+        317.81060791015625,
+        142.96633911132812
+      ],
+      "min": [
+        -122.9140625,
+        118.30448913574219,
+        -123.30038452148438
+      ]
+    },
+    {
+      "bufferView": 9,
+      "componentType": 5126,
+      "count": 4380,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 10,
+      "componentType": 5126,
+      "count": 4380,
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 11,
+      "componentType": 5126,
+      "count": 4380,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 12,
+      "componentType": 5121,
+      "count": 4380,
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 13,
+      "componentType": 5126,
+      "count": 4380,
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 14,
+      "componentType": 5126,
+      "count": 1,
+      "type": "MAT4"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 30828,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 30828,
+      "byteLength": 163164,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 193992,
+      "byteLength": 163164,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 357156,
+      "byteLength": 217552,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 574708,
+      "byteLength": 108776,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 683484,
+      "byteLength": 54388,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 737872,
+      "byteLength": 217552,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 955424,
+      "byteLength": 8760,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 964184,
+      "byteLength": 52560,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1016744,
+      "byteLength": 52560,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1069304,
+      "byteLength": 70080,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1139384,
+      "byteLength": 35040,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1174424,
+      "byteLength": 17520,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1191944,
+      "byteLength": 70080,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1262024,
+      "byteLength": 64
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "Small Oak Tree_data.bin",
+      "byteLength": 1262088
+    }
+  ],
+  "images": [
+    {
+      "uri": "Small Oak Tree_img0.png"
+    },
+    {
+      "uri": "Small Oak Tree_img1.png"
+    },
+    {
+      "uri": "Small Oak Tree_img2.png"
+    },
+    {
+      "uri": "Small Oak Tree_img3.png"
+    },
+    {
+      "uri": "Small Oak Tree_img4.png"
+    },
+    {
+      "uri": "Small Oak Tree_img5.png"
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {},
+      "normalTexture": {
+        "index": 2
+      },
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_pbrSpecularGlossiness": {
+          "diffuseTexture": {
+            "index": 0
+          },
+          "specularGlossinessTexture": {
+            "index": 1
+          }
+        }
+      }
+    },
+    {
+      "pbrMetallicRoughness": {},
+      "normalTexture": {
+        "index": 5
+      },
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_pbrSpecularGlossiness": {
+          "diffuseTexture": {
+            "index": 3
+          },
+          "specularGlossinessTexture": {
+            "index": 4
+          }
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 1,
+            "NORMAL": 2,
+            "TANGENT": 3,
+            "TEXCOORD_0": 4,
+            "JOINTS_0": 5,
+            "WEIGHTS_0": 6
+          },
+          "indices": 0,
+          "material": 0
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "TANGENT": 10,
+            "NORMAL": 9,
+            "POSITION": 8,
+            "TEXCOORD_0": 11,
+            "JOINTS_0": 12,
+            "WEIGHTS_0": 13
+          },
+          "indices": 7,
+          "material": 1
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1,
+        4,
+        5
+      ],
+      "name": "RootNode.0"
+    },
+    {
+      "children": [
+        2,
+        3
+      ],
+      "scale": [
+        0.009999999776482582,
+        0.009999999776482582,
+        0.009999999776482582
+      ],
+      "name": "start_bio_tree_sm_oak_a_mesh.1"
+    },
+    {
+      "mesh": 0,
+      "skin": 0
+    },
+    {
+      "mesh": 1,
+      "skin": 0
+    },
+    {
+      "name": "start_bio_tree_sm_oak_a_rigid.2"
+    },
+    {
+      "children": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "name": "start_bio_tree_sm_oak_a_joint1.3"
+    },
+    {
+      "translation": [
+        17.11798095703125,
+        317.06793212890625,
+        10.89261531829834
+      ],
+      "name": "attach_top.4"
+    },
+    {
+      "translation": [
+        17.248865127563477,
+        316.2777404785156,
+        12.457833290100098
+      ],
+      "rotation": [
+        -0.7071067094802856,
+        0,
+        0,
+        0.7071068286895752
+      ],
+      "scale": [
+        1,
+        0.9999999403953552,
+        0.9999999403953552
+      ],
+      "name": "attach_muzzle.5"
+    },
+    {
+      "translation": [
+        0,
+        100,
+        10.401057243347168
+      ],
+      "name": "attach_center.6"
+    },
+    {
+      "name": "attach_root.7"
+    },
+    {
+      "translation": [
+        4.3318657875061035,
+        32.330665588378906,
+        -9.963603019714355
+      ],
+      "rotation": [
+        0,
+        -0.7071067094802856,
+        0,
+        0.7071068286895752
+      ],
+      "scale": [
+        0.9999999403953552,
+        1,
+        0.9999999403953552
+      ],
+      "name": "attach_held.8"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9985
+    },
+    {
+      "magFilter": 9729,
+      "minFilter": 9985
+    },
+    {
+      "magFilter": 9729,
+      "minFilter": 9985
+    },
+    {
+      "magFilter": 9729,
+      "minFilter": 9985
+    },
+    {
+      "magFilter": 9729,
+      "minFilter": 9985
+    },
+    {
+      "magFilter": 9729,
+      "minFilter": 9985
+    }
+  ],
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "skins": [
+    {
+      "inverseBindMatrices": 14,
+      "skeleton": 5,
+      "joints": [
+        5
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 1,
+      "source": 1
+    },
+    {
+      "sampler": 2,
+      "source": 2
+    },
+    {
+      "sampler": 3,
+      "source": 3
+    },
+    {
+      "sampler": 4,
+      "source": 4
+    },
+    {
+      "sampler": 5,
+      "source": 5
+    }
+  ],
+  "scene": 0,
+  "extensionsUsed": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ],
+  "extensionsRequired": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ]
+}
