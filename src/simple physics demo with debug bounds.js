@@ -28,7 +28,7 @@ function CompoundBody(props) {
         <meshNormalMaterial />
       </mesh>
       <mesh receiveShadow castShadow position={[1, 0, 0]}>
-        <sphereGeometry args={[0.65, 16, 16]} />
+        <sphereBufferGeometry args={[0.65, 16, 16]} />
         <meshNormalMaterial />
       </mesh>
     </group>
